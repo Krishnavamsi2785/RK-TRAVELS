@@ -6,7 +6,7 @@ const bookingTable = document.querySelector('#bookingTable tbody');
 const toast = document.getElementById('toast');
 const searchInput = document.getElementById('searchInput');
 
-// Hardcoded admin credentials - Make sure you use these exact values!
+// Hardcoded admin credentials
 const ADMIN_USER = 'admin';
 const ADMIN_PASS = 'Taxi12345';
 
