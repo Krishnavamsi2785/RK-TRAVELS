@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Admin Panel • Taxi Service</title>
+    <link rel="stylesheet" href="admin.css"/>
+</head>
+<body>
+    <header class="admin-header">
+        <h1>🚖 Taxi Service Admin Panel</h1>
+    </header>
+
+    <div id="toast" class="toast" style="display:none;"></div>
+
+    <main class="container">
+        <div id="loginDiv" class="card">
+            <h2>Admin Login</h2>
+            <input id="adminUser" type="text" placeholder="Username"/>
+            <input id="adminPass" type="password" placeholder="Password"/>
+            <button id="loginBtn">Login</button>
+            <p id="loginError" class="error"></p>
+        </div>
+
+        <div id="adminContent" style="display:none;">
+            <h2>All Bookings</h2>
+
+            <div class="dashboard-cards">
+                <div class="card stat-card">
+                    <h3>Total Bookings</h3>
+                    <p id="totalBookings">0</p>
+                </div>
+                <div class="card stat-card pending">
+                    <h3>Pending</h3>
+                    <p id="pendingBookings">0</p>
+                </div>
+                <div class="card stat-card accepted">
+                    <h3>Accepted</h3>
+                    <p id="acceptedBookings">0</p>
+                </div>
+                <div class="card stat-card completed">
+                    <h3>Completed</h3>
+                    <p id="completedBookings">0</p>
+                </div>
+                <div class="card stat-card canceled">
+                    <h3>Canceled</h3>
+                    <p id="canceledBookings">0</p>
+                </div>
+            </div>
+
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search by name, pickup, drop, phone..."/>
+            </div>
+
+            <table id="bookingTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Pickup</th>
+                        <th>Drop</th>
+                        <th>Date & Time</th>
+                        <th>Passengers</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                        <th>Status</th>
+                        <th>Update</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>

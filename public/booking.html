@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Book Your Ride • Brother's Taxi Service</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="hero booking-hero">
+      <div class="hero-image-overlay"></div>
+      <div class="hero-content">
+        <h1>WELCOME TO RK TRAVELS</h1>
+        <h1>🚖 Book Your Ride Now</h1>
+        <p>Fast • Safe • Reliable • Transparent Pricing</p>
+        <a href="#status-section" class="btn btn-secondary check-status-btn">Check Status</a>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="booking-card">
+        <h2>Enter Your Ride Details</h2>
+        <form id="bookingForm">
+          <div class="form-group">
+            <label><i class="fa-solid fa-location-dot"></i> Pickup Location</label>
+            <input type="text" name="pickup" placeholder="Enter pickup point" required />
+          </div>
+
+          <div class="form-group">
+            <label><i class="fa-solid fa-map-pin"></i> Drop Location</label>
+            <input type="text" name="drop" placeholder="Enter drop point" required />
+          </div>
+
+          <div class="form-group">
+            <label><i class="fa-solid fa-calendar"></i> Date & Time</label>
+            <input type="datetime-local" name="dateTime" required />
+          </div>
+
+          <div class="form-group">
+            <label><i class="fa-solid fa-users"></i> Number of Passengers</label>
+            <input type="number" name="passengers" min="1" placeholder="Number of passengers" required />
+          </div>
+
+          <div class="form-group">
+            <label><i class="fa-solid fa-user"></i> Name</label>
+            <input type="text" name="name" placeholder="Your full name" required />
+          </div>
+
+          <div class="form-group">
+            <label><i class="fa-solid fa-phone"></i> Phone</label>
+            <input type="tel" name="phone" placeholder="Your phone number" required />
+          </div>
+
+          <div class="form-group">
+            <label><i class="fa-solid fa-envelope"></i> Email</label>
+            <input type="email" name="email" placeholder="Your email" required />
+          </div>
+
+          <button type="submit" class="btn btn-primary">Submit Booking</button>
+        </form>
+
+        <div id="confirmation"></div>
+      </div>
+
+      <div class="booking-card status-card" id="status-section">
+        <h2>Check Booking Status</h2>
+        <form id="statusForm">
+          <div class="form-group">
+            <label><i class="fa-solid fa-ticket"></i> Booking ID</label>
+            <input type="text" id="bookingId" placeholder="Enter your Booking ID" required />
+          </div>
+          <button type="submit" class="btn btn-secondary">Check Status</button>
+        </form>
+        <div id="statusResult"></div>
+      </div>
+      
+    </main>
+
+    <section class="car-gallery-section">
+      <div class="container">
+        <h2>Our Fleet</h2>
+        <div class="gallery-grid">
+          <div class="gallery-item specific-fit">
+            <img src="images/img5.jpg" alt="A clean taxi vehicle">
+          </div>
+          <div class="gallery-item specific-fit">
+            <img src="images/img1.jpg" alt="Interior of a taxi">
+          </div>
+          <div class="gallery-item">
+            <img src="images/img3.jpg" alt="A taxi driver smiling">
+          </div>
+          <div class="gallery-item">
+            <img src="images/img4.jpg" alt="A family friendly car">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="booking.js"></script>
+</body>
+</html>

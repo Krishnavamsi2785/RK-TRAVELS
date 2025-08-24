@@ -1,0 +1,353 @@
+/* General Reset & Typography */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease-in-out;
+}
+
+body {
+    background: #eef1f9;
+    color: #2c3e50;
+}
+
+/* Hero Section */
+.hero.booking-hero {
+    position: relative;
+    overflow: hidden;
+    background-image: url('./images/rktravels.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 6rem 1rem;
+    text-align: center;
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.hero p {
+    font-size: 1rem;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    margin: -3rem auto 2rem;
+    padding: 0 1rem;
+    position: relative;
+    z-index: 3;
+}
+
+/* Booking Card */
+.booking-card {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.15);
+    padding: 2rem;
+}
+
+.booking-card h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #4facfe;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* Form Groups */
+.form-group {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #555;
+    display: flex;
+    align-items: center;
+}
+
+.form-group label i {
+    margin-right: 0.5rem;
+    color: #4facfe;
+}
+
+.form-group input {
+    padding: 0.8rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ddd;
+    outline: none;
+    font-size: 1rem;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.form-group input:focus {
+    border-color: #4facfe;
+    box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.2);
+}
+
+/* Buttons */
+.btn {
+    display: block;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+}
+
+.btn-primary {
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    color: white;
+    border: none;
+    box-shadow: 0 0.25rem 1rem 0 rgba(40, 150, 255, 0.75);
+}
+
+.btn-primary:hover {
+    background-image: linear-gradient(to right, #00f2fe 0%, #4facfe 100%);
+    box-shadow: 0 0.4rem 1.25rem 0 rgba(40, 150, 255, 0.9);
+}
+
+.btn-secondary {
+    background: white;
+    color: #4facfe;
+    border: 2px solid #4facfe;
+    margin-top: 1rem;
+}
+
+.btn-secondary:hover {
+    background: #4facfe;
+    color: white;
+}
+
+/* Confirmation Message (on the booking page) */
+#confirmation {
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    color: #28a745;
+}
+
+/* Car Gallery Section */
+.car-gallery-section {
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.car-gallery-section h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: #2c3e50;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 1rem;
+}
+
+.gallery-item {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Style for specific images that need to fit entirely (e.g., logos or full-car shots) */
+.gallery-item.specific-fit img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* Style for the remaining images that should fill the space */
+.gallery-item:not(.specific-fit) img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Confirmation Page Styles */
+.confirmation-container {
+    padding: 3rem 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #eef1f9;
+}
+
+.confirmation-card {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.15);
+    padding: 2rem;
+    max-width: 600px;
+    width: 100%;
+}
+
+.confirmation-card h1 {
+    font-size: 2rem;
+    color: #28a745;
+    margin-bottom: 1rem;
+}
+
+.confirmation-card h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.thank-you-note {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.booking-details {
+    background: #f8f9fa;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+.booking-details p {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.btn.btn-secondary {
+    margin-top: 0;
+}
+
+/* Desktop Styles */
+@media (min-width: 768px) {
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .hero p {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: -4rem auto 2.5rem;
+    }
+
+    .booking-card {
+        padding: 3rem;
+    }
+
+    .booking-card h2 {
+        font-size: 2rem;
+    }
+
+    .form-group {
+        margin-bottom: 2rem;
+    }
+
+    .btn {
+        width: auto;
+    }
+
+    .btn-secondary {
+        display: inline-block;
+        width: auto;
+        margin-left: 1rem;
+    }
+
+    .gallery-grid {
+        padding: 0;
+    }
+}
+/* Booking Status Card */
+.booking-card.status-card {
+  margin-top: 2rem;
+  padding: 2rem;
+}
+
+#statusResult {
+  margin-top: 1.5rem;
+  text-align: left;
+}
+
+.status-result-box {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  background: #f8f9fa;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.status-result-box p {
+  margin-bottom: 0.5rem;
+}
+
+/* Status colors */
+.status-result-box .status-pending { color: #f0ad4e; font-weight: bold; }
+.status-result-box .status-accepted { color: #28a745; font-weight: bold; }
+.status-result-box .status-rejected { color: #dc3545; font-weight: bold; }
+/* Add to your existing CSS file */
+.check-status-btn {
+    margin-top: 1rem;
+    font-size: 1rem;
+    padding: 10px 20px;
+    background:#4facfe;
+    color: white;
+    border: 2px solid #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.check-status-btn:hover {
+    background: #4facfe;
+    color: white;
+}
