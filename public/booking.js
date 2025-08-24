@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
             statusResultDiv.innerHTML = `<p>Checking status...</p>`;
 
             try {
-                const res = await fetch(`/api/bookings/${bookingId}`);
+                const res = await fetch(`https://rk-travels.onrender.com//api/bookings/${bookingId}`);
                 const result = await res.json();
                 
                 if (result.success && result.booking) {
@@ -77,3 +77,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 });
+
