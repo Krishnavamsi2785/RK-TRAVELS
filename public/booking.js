@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const data = Object.fromEntries(formData.entries());
 
             try {
-                const res = await fetch('https://rk-travels.onrender.com//api/bookings', {
+                const res = await fetch('https://rk-travels.onrender.com/api/bookings', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(data)
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
             statusResultDiv.innerHTML = `<p>Checking status...</p>`;
 
             try {
-                const res = await fetch(`https://rk-travels.onrender.com//api/bookings/${bookingId}`);
+                const res = await fetch(`https://rk-travels.onrender.com/api/bookings/${bookingId}`);
                 const result = await res.json();
                 
                 if (result.success && result.booking) {
@@ -77,4 +77,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 });
+
 
