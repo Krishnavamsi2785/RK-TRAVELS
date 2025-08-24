@@ -30,6 +30,7 @@ loginBtn.addEventListener('click', () => {
   const user = document.getElementById('adminUser').value;
   const pass = document.getElementById('adminPass').value;
 
+  // The problem is here. Make sure the username and password are correct.
   if(user === ADMIN_USER && pass === ADMIN_PASS){
     loginDiv.style.display = 'none';
     adminContent.style.display = 'block';
@@ -131,4 +132,3 @@ socket.on('newBooking', booking => {
   showToast(`New booking from ${booking.name}`, 'success');
   loadBookings();
 });
-
