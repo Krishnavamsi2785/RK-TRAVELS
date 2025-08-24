@@ -44,7 +44,7 @@ loginBtn.addEventListener('click', () => {
 // ----------------------
 async function loadBookings(){
     try {
-        const res = await fetch('/api/bookings');
+        const res = await fetch('https://rk-travels.onrender.com//api/bookings');
         const data = await res.json();
 
         if(!data.success) {
@@ -107,7 +107,7 @@ searchInput.addEventListener('input', () => {
 // ----------------------
 async function updateStatus(id, status){
     try {
-        const res = await fetch(`/api/bookings/${id}`, {
+        const res = await fetch(`https://rk-travels.onrender.com//api/bookings/${id}`, {
             method: 'PATCH',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ status })
@@ -130,4 +130,5 @@ async function updateStatus(id, status){
 socket.on('newBooking', booking => {
     showToast(`New booking from ${booking.name}`, 'success');
     loadBookings();
+
 });
