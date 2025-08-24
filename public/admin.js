@@ -27,17 +27,17 @@ function showToast(message, type = 'success') {
 // Login
 // ----------------------
 loginBtn.addEventListener('click', () => {
-  const user = document.getElementById('adminUser').value;
-  const pass = document.getElementById('adminPass').value;
+    const user = document.getElementById('adminUser').value;
+    const pass = document.getElementById('adminPass').value;
 
-  // The problem is here. Make sure the username and password are correct.
-  if(user === ADMIN_USER && pass === ADMIN_PASS){
-    loginDiv.style.display = 'none';
-    adminContent.style.display = 'block';
-    loadBookings();
-  } else {
-    loginError.textContent = 'Invalid username or password!';
-  }
+    console.log('Entered Username:', user);
+    console.log('Entered Password:', pass);
+    console.log('Expected Username:', ADMIN_USER);
+    console.log('Expected Password:', ADMIN_PASS);
+
+    if(user === ADMIN_USER && pass === ADMIN_PASS){
+        // ...
+    }
 });
 
 // ----------------------
@@ -132,3 +132,4 @@ socket.on('newBooking', booking => {
   showToast(`New booking from ${booking.name}`, 'success');
   loadBookings();
 });
+
